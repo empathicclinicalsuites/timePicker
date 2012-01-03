@@ -33,7 +33,7 @@
     return e.timePicker || (e.timePicker = new jQuery._timePicker(e, settings));
   };
 
-  $.timePicker.version = '0.3';
+  $.timePicker.version = '0.4';
 
   $._timePicker = function(elm, settings) {
 
@@ -261,6 +261,7 @@
 
   function timeStringToDate(input, settings) {
     if (input) {
+      input = input.toUpperCase();
       var array = input.split(settings.separator);
       var hours = parseFloat(array[0]);
       var minutes = parseFloat(array[1]);
